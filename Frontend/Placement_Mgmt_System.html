@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Management System</title>
+    <link rel="stylesheet" href="styles.css" />
+    
+    
+</head>
+<body onload="showLogin()">
+    <!-- Login Page -->
+    <div class="login-container">
+        <div class="container">
+            <div class="header">
+                <h1>Placement Management System</h1>
+                <p>by CHALLA UDAY KIRAN</p>
+            </div>
+            <h1>Login Page</h1>
+            <input type="text" id="username" placeholder="Enter Username">
+            <input type="password" id="password" placeholder="Enter Password">
+            <button onclick="login()">Login</button>
+        </div>
+    </div>
+
+    <!-- CRUD Operations Page -->
+    <div class="crud-container">
+        <div class="header">
+            <h1>Placement Management System</h1>
+            <div>
+                <span id="currentUser"></span>
+                <button onclick="logout()">Logout</button>
+            </div>
+        </div>
+        <div class="crud-content">
+            <button onclick="fetchAdmins()">View Admins</button>
+            <ul id="adminList"></ul>
+
+            <div class="crud-grid">
+                <div>
+                    <h2>Fetch Admin By ID</h2>
+                    <input type="text" id="fetchId" placeholder="Admin ID">
+                    <button onclick="fetchAdminById()">Fetch</button>
+                    <p id="fetchResult"></p>
+                </div>
+
+                <div>
+                    <h2>Save New Admin</h2>
+                    <input type="text" id="saveName" placeholder="Name">
+                    <input type="text" id="savePassword" placeholder="Password">
+                    <button onclick="saveAdmin()">Save</button>
+                </div>
+
+                <div>
+                    <h2>Update Admin</h2>
+                    <input type="text" id="updateId" placeholder="Admin ID">
+                    <input type="text" id="updateName" placeholder="New Name">
+                    <input type="text" id="updatePassword" placeholder="New Password">
+                    <button onclick="updateAdmin()">Update</button>
+                </div>
+
+                <div>
+                    <h2>Delete Admin</h2>
+                    <input type="text" id="deleteId" placeholder="Admin ID">
+                    <button onclick="deleteAdmin()">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
